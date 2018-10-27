@@ -62,7 +62,7 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
 ```
 - There are two minor differences from the original paper:
   - Edge cropping of features and attention maps are removed for better generalization
-  - The first convolution of the third block uses the stride of 2 instead of 1
+  - The first convolution of the third block uses the stride of 2 instead of 1 for better performance
 
 ## Training
 ```
