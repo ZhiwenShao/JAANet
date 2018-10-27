@@ -45,7 +45,8 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
     }
     
     loss_weight: 1e-7
-    
+```
+```
    \lambda_3 = 2:
    
     param {
