@@ -19,3 +19,4 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - dice_coef_loss_layer: Dice coefficient loss
   - softmax_loss_layer: the weighting for the loss of each element is added
 
+# Waitting to be updated
