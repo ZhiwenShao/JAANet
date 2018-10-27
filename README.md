@@ -65,6 +65,18 @@ cd model
 sh train_net.sh
 ```
 
+## Citation
+If you use this code for your research, please cite our papers.
+```
+@inproceedings{shao2018deep,
+  title={Deep Adaptive Attention for Joint Facial Action Unit Detection and Face Alignment},
+  author={Shao, Zhiwen and Liu, Zhilei and Cai, Jianfei and Ma, Lizhuang},
+  booktitle={European Conference on Computer Vision},
+  year={2018},
+  pages={725--740},
+  organization={Springer}
+}
+```
 
-
-# Waitting to be updated
+## Details
+More details will be updated, and the pytorch version will be made available soon
