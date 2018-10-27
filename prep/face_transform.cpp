@@ -45,7 +45,7 @@ int main()
 
 	int count = 0;
 
-	while (getline(input_path, path))//逐行读取数据并存于s中，直至数据全部读取
+	while (getline(input_path, path))//read each line
 	{
 		landmarks.clear();
 
