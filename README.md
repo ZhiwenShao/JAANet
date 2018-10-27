@@ -32,7 +32,8 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
   - The loss_weight for DiceCoefLoss of each AU is the normalized weight computed from the training data
   - The lr_mult for au_mask_conv corresponds to the enhancement coefficient \lambda_3, and the loss_weight of au_mask_loss is related to the reconstruction constraint E_r and \lambda_3
-   - \lambda_3 = 1:
+   (1) \lambda_3 = 1:
+   
     param {
       lr_mult: 1
       decay_mult: 1
@@ -41,9 +42,10 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
       lr_mult: 2
       decay_mult: 0
     }
+    
     loss_weight: 1e-7
     
-   - \lambda_3 = 2:
+   (2) \lambda_3 = 2:
     param {
       lr_mult: 2
       decay_mult: 1
@@ -52,6 +54,7 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
       lr_mult: 4
       decay_mult: 0
     }
+    
     loss_weight: 5e-8
   
 ## Training
