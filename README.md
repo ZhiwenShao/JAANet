@@ -1,9 +1,9 @@
 # JAANet
-This repository implements the training and testing of JAA-Net for "[Deep Adaptive Attention for Joint Facial Action Unit Detection and Face Alignment](http://openaccess.thecvf.com/content_ECCV_2018/papers/Zhiwen_Shao_Deep_Adaptive_Attention_ECCV_2018_paper.pdf)". The repository offers the original implementation of the paper in Caffe.
+This repository implements the training and testing of JAA-Net for "[Deep Adaptive Attention for Joint Facial Action Unit Detection and Face Alignment](http://openaccess.thecvf.com/content_ECCV_2018/papers/Zhiwen_Shao_Deep_Adaptive_Attention_ECCV_2018_paper.pdf)". The repository offers the original implementation of the paper in Caffe
 
 # Getting Started
 ## Dependencies
-- Dependencies for Caffe (http://caffe.berkeleyvision.org/install_apt.html) are required.
+- Dependencies for Caffe (http://caffe.berkeleyvision.org/install_apt.html) are required
 
 - The new implementations in the folders "src" and "include" should be merged into the official Caffe:
   - add the .cpp, .cu files into "src/caffe/layers"
@@ -23,10 +23,10 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
 ## Datasets
 [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
 
-The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
+The 3-fold partitions of both BP4D and DISFA are provided in the folder "data"
 
 ## Preprocessing
-- Run "prep/face_transform.cpp" to conduct similarity transformation for face images.
+- Run "prep/face_transform.cpp" to conduct similarity transformation for face images
 - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
 - Prepare the training data and modify the paths in the "model/BP4D_train_val.prototxt":
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
