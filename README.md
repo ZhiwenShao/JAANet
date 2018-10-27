@@ -18,5 +18,6 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - align_data_transform_layer: reset the order and change the coordinates for landmarks in the cases of mirroring and cropping
   - dice_coef_loss_layer: Dice coefficient loss
   - softmax_loss_layer: the weighting for the loss of each element is added
-
+  - euclidean_loss_layer: the weighting for the loss of each element and the normalizing with inter-ocular distance are added
+  
 # Waitting to be updated
