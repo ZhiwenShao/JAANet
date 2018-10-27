@@ -1,0 +1,32 @@
+message LayerParameter {
+	optional AUMaskBasedLandParameter au_mask_based_land_param = 1;
+	optional DivisionParameter division_param = 2;
+	optional CombinationParameter combination_param = 3;
+	optional AlignDataTransformParameter align_data_transform_param = 4;
+	optional DiceCoefLossParameter dice_coef_loss_param = 5;
+}
+
+message AUMaskBasedLandParameter {
+	required uint32 img_size = 1;
+	required float spatial_ratio = 2;
+	required float spatial_scale = 3;
+	optional string fill_type = 4 [default = "manhattan"];
+	optional float fill_coeff = 5 [default = 0.075];
+	optional float fill_value = 6 [default = 0];
+}
+
+message DivisionParameter {
+  required uint32 width = 1;
+  required uint32 height = 2;
+  repeated uint32 xcoord = 3;
+  repeated uint32 ycoord = 4;
+}
+
+message CombinationParameter {
+  repeated uint32 xcoord = 1;
+  repeated uint32 ycoord = 2;
+}
+
+message DiceCoefLossParameter {
+  optional float smooth = 1 [default = 1.0];
+}
