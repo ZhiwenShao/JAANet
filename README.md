@@ -4,12 +4,13 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
 # Getting Started
 ## Dependencies
 Dependencies for Caffe (http://caffe.berkeleyvision.org/install_apt.html) are required.
--The new implementations in the folders "src" and "include" should be merged into the official Caffe:
+
+- The new implementations in the folders "src" and "include" should be merged into the official Caffe:
 (1) add the .cpp, .cu files into "src/caffe/layers"
 (2) add the .hpp files into "include/caffe/layers"
 (3) add the content of "caffe.proto" into "src/caffe/proto"
 
--New implementations used in our paper:
+- New implementations used in our paper:
 (1) au_mask_based_land_layer: generate attention maps given the locations of landmarks
 (2) division_layer: divide a feature map into multiple identical subparts
 (3) combination_layer: combine mutiple sub feature maps
