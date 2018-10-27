@@ -28,7 +28,7 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
 ## Preprocessing
 - Run "prep/face_transform.cpp" to conduct similarity transformation for face images.
 - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
-- Prepare the training data and modify the paths in the "model/BP4D_train_val.prototxt"
+- Prepare the training data and modify the paths in the "model/BP4D_train_val.prototxt":
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
   - The loss_weight for DiceCoefLoss of each AU is the normalized weight computed from the training data
   - The lr_mult for "au*_mask_conv3*" corresponds to the enhancement coefficient "\lambda_3", and the loss_weight of "au*_mask_loss" is related to the reconstruction constraint "E_r" and "\lambda_3"
@@ -60,6 +60,9 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
     
     loss_weight: 5e-8
 ```
+- There are two minor differences from the original paper:
+  - Edge cropping of features and attention maps are removed for better generalization
+  - The first convolution of the third block uses the stride of 2 instead of 1
 
 ## Training
 ```
@@ -80,5 +83,5 @@ If you use this code for your research, please cite our paper.
 }
 ```
 
-## Details
+## Updating
 More details will be updated, and the Pytorch version will be made available soon
