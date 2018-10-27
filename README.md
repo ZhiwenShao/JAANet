@@ -20,4 +20,21 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - softmax_loss_layer: the weighting for the loss of each element is added
   - euclidean_loss_layer: the weighting for the loss of each element and the normalizing with inter-ocular distance are added
   
+## Datasets
+[BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
+
+The 3-fold partitions of both BP4D and DISFA are provided in the folder "data".
+
+## Preprocessing
+- Run face_transform.cpp to conduct similarity transformation for face images.
+- run convert_imageset of Caffe to convert the images to leveldb or lmdb
+
+## Training
+```
+cd model
+sh train_net.sh
+```
+
+
+
 # Waitting to be updated
