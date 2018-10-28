@@ -19,16 +19,21 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - dice_coef_loss_layer: Dice coefficient loss
   - softmax_loss_layer: the weighting for the loss of each element is added
   - euclidean_loss_layer: the weighting for the loss of each element and the normalizing with inter-ocular distance are added
-  
+
+- Build Caffe 
+
 ## Datasets
 [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
 
 The 3-fold partitions of both BP4D and DISFA are provided in the folder "data"
 
 ## Preprocessing
-- Run "prep/face_transform.cpp" to conduct similarity transformation for face images
-- Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
-- Prepare the training data and modify the paths in the "model/BP4D_train_val.prototxt":
+- Prepare the training data
+  - Run "prep/face_transform.cpp" to conduct similarity transformation for face images
+  - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
+  - Run "tools/convert_data" to convert the landmark labels and weights to leveldb or lmdb
+- Modify the "model/BP4D_train_val.prototxt":
+  - Modify the paths of data
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
   - The loss_weight for DiceCoefLoss of each AU is the normalized weight computed from the training data
   - The lr_mult for "au*_mask_conv3*" corresponds to the enhancement coefficient "\lambda_3", and the loss_weight of "au*_mask_loss" is related to the reconstruction constraint "E_r" and "\lambda_3"
