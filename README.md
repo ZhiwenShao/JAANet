@@ -14,7 +14,7 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - au_mask_based_land_layer: generate attention maps given the locations of landmarks
   - division_layer: divide a feature map into multiple identical subparts
   - combination_layer: combine mutiple sub feature maps
-  - data_layer: the processing of landmarks in the case of mirroring faces is added
+  - data_layer and data_transform_layer: the processing of landmarks in the case of mirroring faces is added
   - align_data_transform_layer: reset the order and change the coordinates for landmarks in the cases of mirroring and cropping
   - dice_coef_loss_layer: Dice coefficient loss
   - softmax_loss_layer: the weighting for the loss of each element is added
