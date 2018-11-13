@@ -13,10 +13,10 @@
 
 const double pi = CV_PI;
 const int landmark_size = 49;
-//const int AUoccur_size = 12;
-const int img_size = 200; //200;
-const double veri_enlarge = 2.9;
-//const int str_length = 200; 
+const int img_size = 200;
+//control the size of cropped bounding box
+const double box_enlarge = 2.9;
+
 using namespace std;
 
 
@@ -26,6 +26,7 @@ int main()
 	ofstream output_path, output_land;
 	string path;
 
+	//without the postfix like .jpg, .png
 	input_path.open("BP4D_all_path.txt");
 	input_land.open("BP4D_all_land.txt");
 
@@ -58,7 +59,7 @@ int main()
 
 		count ++;
 
-		img = cv::imread(("F:\\Database\\FacialActionUnitRecognition\\FERA2015\\fera-2015_download_2017-07-30_06-44-25\\BP4D\\BP4D-training\\" + path + ".jpg").data(), CV_LOAD_IMAGE_COLOR);
+		img = cv::imread(("BP4D/" + path + ".jpg").data(), CV_LOAD_IMAGE_COLOR);
 
 		cv::Mat ptsMat(landmarks.size() / 2, 2, CV_32F, landmarks.data());
 
@@ -94,7 +95,7 @@ int main()
 
 		cx = (xMin + xMax) * 0.5f;
 		cy = (yMin + yMax) * 0.5f;
-		halfSize = 0.5 * veri_enlarge
+		halfSize = 0.5 * box_enlarge
 			* ((xMax - xMin > yMax - yMin) ? (xMax - xMin) : (yMax - yMin));
 		scale = half_img_size / halfSize;
 		float mdataVeri2[9] = {
@@ -123,7 +124,7 @@ int main()
 		}
 		output_land << "\n";
 
-		string newpath("D:\\ExperimentData\\FacialActionUnitRecognition\\v8\\BP4D\\" + path + ".jpg");
+		string newpath("BP4D_aligned/" + path + ".jpg");
 		output_path << newpath << endl;
 		cv::imwrite(newpath.data(), aligned);//jpg, default quality: 95
 
