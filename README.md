@@ -92,4 +92,4 @@ If you use this code for your research, please cite our paper.
 More details will be updated, and the Pytorch version will be made available soon
 
 # Acknowledgments
-Code is inspired by [DRML](https://github.com/zkl20061823/DRML) and [A-Variation-of-Dice-coefficient-Loss-Caffe-Layer](https://github.com/HolmesShuan/A-Variation-of-Dice-coefficient-Loss-Caffe-Layer)
+Code is partially inspired by [DRML](https://github.com/zkl20061823/DRML) and [A-Variation-of-Dice-coefficient-Loss-Caffe-Layer](https://github.com/HolmesShuan/A-Variation-of-Dice-coefficient-Loss-Caffe-Layer)
