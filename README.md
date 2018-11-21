@@ -32,8 +32,8 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data"
   - Run "prep/face_transform.cpp" to conduct similarity transformation for face images
   - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
   - Merge "tools/convert_data.cpp" into Caffe
-  - Run "tools/convert_data" to convert the AU and landmark labels, weights, and reflect_49 to leveldb or lmdb: the example format of files for AU and landmark labels and weights are in "data/examples"; reflect_49.txt is in "data"; the weights are shared by all the training samples (only one line needed); reflect_49 is used to reset the order and change the coordinates for landmarks in the case of face mirroring.
-- Our method is evaluated by 3-fold cross validation. For example, “BP4D_combine_1_2” denotes the combination of partition 1 and partition 2.
+  - Run "tools/convert_data" to convert the AU and landmark labels, weights, and reflect_49 to leveldb or lmdb: the example format of files for AU and landmark labels and weights are in "data/examples"; reflect_49.txt is in "data"; the weights are shared by all the training samples (only one line needed); reflect_49 is used to reset the order and change the coordinates for landmarks in the case of face mirroring
+- Our method is evaluated by 3-fold cross validation. For example, “BP4D_combine_1_2” denotes the combination of partition 1 and partition 2
 - Modify the "model/BP4D_train_val.prototxt":
   - Modify the paths of data
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
