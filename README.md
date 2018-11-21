@@ -80,7 +80,7 @@ sh train_net.sh
 ```
 
 ## Citation
-If you use this code for your research, please cite our paper.
+If you use this code for your research, please cite our paper
 ```
 @inproceedings{shao2018deep,
   title={Deep Adaptive Attention for Joint Facial Action Unit Detection and Face Alignment},
