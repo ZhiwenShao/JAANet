@@ -23,5 +23,6 @@ for i=1:2:length(part_ind)
     
 end
 
+% for validation set: each weight should be 1
 test_weight = ones(size(AU_weight));
 dlmwrite('BP4D_test_weight.txt', test_weight, 'delimiter',' ', 'newline', 'pc');
