@@ -31,7 +31,7 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data"
 - Prepare the training data
   - Run "prep/face_transform.cpp" to conduct similarity transformation for face images
   - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
-  - Merge "tools/convert_data.cpp" into Caffe and use it to convert the landmark labels and weights to leveldb or lmdb
+  - Merge "tools/convert_data.cpp" into Caffe and use it to convert the AU and landmark labels and weights to leveldb or lmdb: the example format of files for AU and landmark labels and weights are in data/examples, in which the weights are shared by all the training samples (only one line needed). 
 - Modify the "model/BP4D_train_val.prototxt":
   - Modify the paths of data
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
