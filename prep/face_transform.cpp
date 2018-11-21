@@ -122,7 +122,7 @@ int main()
 				output_land << ptsMat_3d.at<float>(r, c) << ' ';
 			}
 		}
-		output_land << "\n";
+		output_land << '\n';
 
 		string newpath("BP4D_aligned/" + path + ".jpg");
 		output_path << newpath << endl;
