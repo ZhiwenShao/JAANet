@@ -119,7 +119,7 @@ int main()
 		{
 			for (int c = 0; c < 2; c++)
 			{
-				output_land << ptsMat_3d.at<float>(r, c) << '\t';
+				output_land << ptsMat_3d.at<float>(r, c) << ' ';
 			}
 		}
 		output_land << "\n";
