@@ -19,8 +19,8 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - dice_coef_loss_layer: Dice coefficient loss
   - softmax_loss_layer: the weighting for the loss of each element is added
   - euclidean_loss_layer: the weighting for the loss of each element and the normalizing with inter-ocular distance are added
-
-- Build Caffe 
+  - convert_data: convert the AU and landmark labels, weights, and reflect_49 to leveldb or lmdb
+- Build Caffe
 
 ## Datasets
 [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
