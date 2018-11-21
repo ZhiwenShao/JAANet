@@ -25,7 +25,7 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
 ## Datasets
 [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
 
-The 3-fold partitions of both BP4D and DISFA are provided in the folder "data", in which the path file of DISFA contains each frame of videos.
+The 3-fold partitions of both BP4D and DISFA are provided in the folder "data", in which the path file of DISFA contains each frame of videos
 
 ## Preprocessing
 - Prepare the training data
