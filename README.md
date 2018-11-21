@@ -9,7 +9,7 @@ This repository implements the training and testing of JAA-Net for "[Deep Adapti
   - Add the .cpp, .cu files into "src/caffe/layers"
   - Add the .hpp files into "include/caffe/layers"
   - Add the content of "caffe.proto" into "src/caffe/proto"
-
+  - Add "tools/convert_data.cpp" into "tools"
 - New implementations used in our paper:
   - au_mask_based_land_layer: generate attention maps given the locations of landmarks
   - division_layer: divide a feature map into multiple identical subparts
@@ -31,7 +31,6 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data"
 - Prepare the training data
   - Run "prep/face_transform.cpp" to conduct similarity transformation for face images
   - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
-  - Merge "tools/convert_data.cpp" into Caffe
   - Run "tools/convert_data" to convert the AU and landmark labels, weights, and reflect_49 to leveldb or lmdb: the example format of files for AU and landmark labels and weights are in "data/examples"; reflect_49.txt is in "data"; the weights are shared by all the training samples (only one line needed); reflect_49 is used to reset the order and change the coordinates for landmarks in the case of face mirroring
   - Our method is evaluated by 3-fold cross validation. For example, “BP4D_combine_1_2” denotes the combination of partition 1 and partition 2
 - Modify the "model/BP4D_train_val.prototxt":
