@@ -30,6 +30,8 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data"
 ## Preprocessing
 - Prepare the training data
   - Run "prep/face_transform.cpp" to conduct similarity transformation for face images
+  - Run "prep/write_AU_weight.m" to compute the weight of each AU for the training set
+  - Run "prep/write_biocular.m" to compute the inter-ocular distance of each face image
   - Run "tools/convert_imageset" of Caffe to convert the images to leveldb or lmdb
   - Run "tools/convert_data" to convert the AU and landmark labels, inter-ocular distances, weights and reflect_49 to leveldb or lmdb: the example format of files for AU and landmark labels, inter-ocular distances and weights are in "data/examples"; reflect_49.txt is in "data"; the weights are shared by all the training samples (only one line needed); reflect_49 is used to reset the order and change the coordinates for landmarks in the case of face mirroring
   - Our method is evaluated by 3-fold cross validation. For example, “BP4D_combine_1_2” denotes the combination of partition 1 and partition 2
