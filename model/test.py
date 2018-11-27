@@ -21,7 +21,7 @@ gpu = 0
 caffe.set_mode_gpu()
 caffe.set_device(gpu)
 
-model_path = "../v6_2/"
+model_path = "./"
 img_path_prefix = "../imgs/BP4D_aligned/"
 au_net_model = model_path + "deploy.prototxt"
 start_iter = 1
