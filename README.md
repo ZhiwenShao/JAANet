@@ -79,6 +79,12 @@ cd model
 sh train_net.sh
 ```
 
+## Testing
+```
+cd model
+python test.py
+```
+
 ## Citation
 If you use this code for your research, please cite our paper
 ```
