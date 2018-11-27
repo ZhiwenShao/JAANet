@@ -26,7 +26,7 @@ img_path_prefix = "../imgs/BP4D_aligned/"
 au_net_model = model_path + "deploy.prototxt"
 start_iter = 1
 n_iters = 8
-batch_size = 8
+batch_size = 1
 crop_size = 176
 crop_offset = 12
 
