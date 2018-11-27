@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, f1_score
 
 #0 - debug, 1 - info (still a LOT of outputs), 2 - warnings, 3 - errors
 os.environ["GLOG_minloglevel"] = "2"
-sys.path.insert(0,"/data0/home/szw/code/deepLearning/caffe-master-szw-v5_eccv/python")
+sys.path.insert(0,"/code/caffe/python")
 import caffe
 
 
