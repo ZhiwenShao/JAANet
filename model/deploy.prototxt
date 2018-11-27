@@ -4,7 +4,7 @@ layer {
   name: "data"
   type: "Input"
   top: "data"
-  input_param { shape: { dim: 8 dim: 3 dim: 176 dim: 176 } }
+  input_param { shape: { dim: 1 dim: 3 dim: 176 dim: 176 } }
 }
 
 layer {
