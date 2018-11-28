@@ -67,8 +67,8 @@ void DivisionLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
         
 				for(int h = v; h<v+height_; h++) {
           
-					int index_bottom =  b*c*height_bottom*width_bottom+c*height_bottom*width_bottom + h*width_bottom + w;
-					int index_top = b*c*height_*width_+c*height_*width_ + (h-v)*width_ + 0;
+					int index_bottom =  b*channels_*height_bottom*width_bottom+c*height_bottom*width_bottom + h*width_bottom + w;
+					int index_top = b*channels_*height_*width_+c*height_*width_ + (h-v)*width_ + 0;
           
 					for (int i = 0; i <width_; i++) {
 						top_data[index_top + i] = bottom_data[index_bottom + i];
@@ -103,8 +103,8 @@ void DivisionLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
             
 				for(int h = v; h<v+height_; h++) {
             
-					int index_bottom = b*c*height_bottom*width_bottom+c*height_bottom*width_bottom + h*width_bottom + w;
-					int index_top = b*c*height_*width_+c*height_*width_ + (h-v)*width_ + 0;
+					int index_bottom = b*channels_*height_bottom*width_bottom+c*height_bottom*width_bottom + h*width_bottom + w;
+					int index_top = b*channels_*height_*width_+c*height_*width_ + (h-v)*width_ + 0;
 					for (int i = 0; i < width_; i++) {
 						bottom_diff[index_bottom + i] = top_diff[index_top + i];
 					}

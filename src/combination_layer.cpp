@@ -61,8 +61,8 @@ void CombinationLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
         
 				for(int h = v; h<v+height_bottom; h++) {
 
-					int index_bottom = b*c*height_bottom*width_bottom+c*height_bottom*width_bottom + (h-v)*width_bottom;
-					int index_top = b*c*height_*width_+c*height_*width_+ h*width_ + w;
+					int index_bottom = b*bottom[0]->channels()*height_bottom*width_bottom+c*height_bottom*width_bottom + (h-v)*width_bottom;
+					int index_top = b*bottom[0]->channels()*height_*width_+c*height_*width_+ h*width_ + w;
           
 					for (int i = 0; i <width_bottom; i++) {
 						top_data[index_top + i] = bottom_data[index_bottom + i];
@@ -98,8 +98,8 @@ void CombinationLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
             
 				for(int h = v; h<v+height_bottom; h++) {
 
-					int index_bottom = b*c*height_bottom*width_bottom+c*height_bottom*width_bottom + (h-v)*width_bottom;
-					int index_top = b*c*height_*width_+c*height_*width_+ h*width_ + w;
+					int index_bottom = b*bottom[0]->channels()*height_bottom*width_bottom+c*height_bottom*width_bottom + (h-v)*width_bottom;
+					int index_top = b*bottom[0]->channels()*height_*width_+c*height_*width_+ h*width_ + w;
                
 					for (int i = 0; i < width_bottom; i++) {
 						bottom_diff[index_bottom + i] = top_diff[index_top + i];
