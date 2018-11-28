@@ -73,12 +73,8 @@ for _iter in range(start_iter, n_iters+1):
     for i in range(AUoccur_actual.shape[0]):          
         curr_actual=AUoccur_actual[i]
         curr_pred=AUoccur_pred[i]
-
-        new_curr_actual=curr_actual[curr_actual!=999]
-        new_curr_pred=curr_pred[curr_actual!=999]
-      
-        f1score_arr[i] = f1_score(new_curr_actual, new_curr_pred)
-        acc_arr[i] = accuracy_score(new_curr_actual, new_curr_pred)
+        f1score_arr[i] = f1_score(curr_actual, curr_pred)
+        acc_arr[i] = accuracy_score(curr_actual, curr_pred)
         
     print>> res_file, _iter, f1score_arr.mean(), acc_arr.mean()    
 res_file.close()
