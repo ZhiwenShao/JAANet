@@ -61,6 +61,7 @@ for _iter in range(start_iter, n_iters+1):
             AUoccur_pred_prob = np.concatenate((AUoccur_pred_prob, au_probAU))
         print _iter, batch_ind    
     AUoccur_pred_prob = AUoccur_pred_prob[0:img_num,:]
+    AUoccur_pred_prob = np.squeeze(AUoccur_pred_prob)
     np.savetxt(model_path+data_name+"_part"+str(part_ind)+"_predAUprob-"+str(_iter)+"_all_.txt", AUoccur_pred_prob, fmt="%f", delimiter="\t")
     AUoccur_pred = np.zeros(AUoccur_pred_prob.shape)
     AUoccur_pred[AUoccur_pred_prob<0.5] =0
