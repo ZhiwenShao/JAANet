@@ -53,6 +53,7 @@ int main()
 		for (int j = 0; j < landmark_size; j++)
 		{
 			input_land >> land_x >> land_y;
+			// Make the landmarks be indexed from 0
 			landmarks.push_back(land_x-1);
 			landmarks.push_back(land_y-1);					
 		}
