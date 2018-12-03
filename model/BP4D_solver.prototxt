@@ -5,7 +5,7 @@ gamma: 0.3
 stepsize: 20000
 display: 100
 iter_size: 1
-max_iter: 80000
+max_iter: 120000
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 10000
