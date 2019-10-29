@@ -78,12 +78,19 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data", 
 cd model
 sh train_net.sh
 ```
+- Trained models on BP4D can be downloaded [here](https://sjtueducn-my.sharepoint.com/:f:/g/personal/shaozhiwen_sjtu_edu_cn/EhVWf3EgvnNLj-o_fWT3InEBCcI9vlnxkrOkSOUxRAzkAg?e=XN9v67)
 
 ## Testing
+- Compute evaluation metrics
 ```
 cd model
 python test.py
 ```
+- Visualize attention maps
+```
+python visualize_attention_map.py
+```
+
 
 ## Citation
 If you use this code for your research, please cite our paper
@@ -98,8 +105,8 @@ If you use this code for your research, please cite our paper
 }
 ```
 
-## Updating
-More details will be updated, and the Pytorch version will be made available soon
+## PyTorch Version
+An extended version of JAA-Net implemented by PyTorch will be made available soon.
 
 # Acknowledgments
 Code is partially inspired by [DRML](https://github.com/zkl20061823/DRML) and [A-Variation-of-Dice-coefficient-Loss-Caffe-Layer](https://github.com/HolmesShuan/A-Variation-of-Dice-coefficient-Loss-Caffe-Layer)
