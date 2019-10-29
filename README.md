@@ -78,7 +78,7 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data", 
 cd model
 sh train_net.sh
 ```
-- Trained models on BP4D can be downloaded [here](https://sjtueducn-my.sharepoint.com/:f:/g/personal/shaozhiwen_sjtu_edu_cn/EhVWf3EgvnNLj-o_fWT3InEBCcI9vlnxkrOkSOUxRAzkAg?e=XN9v67)
+- Trained models on BP4D with 3-fold cross-validation can be downloaded [here](https://sjtueducn-my.sharepoint.com/:f:/g/personal/shaozhiwen_sjtu_edu_cn/EhVWf3EgvnNLj-o_fWT3InEBCcI9vlnxkrOkSOUxRAzkAg?e=XN9v67)
 
 ## Testing
 - Compute evaluation metrics
