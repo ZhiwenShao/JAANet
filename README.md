@@ -83,7 +83,6 @@ sh train_net.sh
 ## Testing
 - Compute evaluation metrics
 ```
-cd model
 python test.py
 ```
 - Visualize attention maps
