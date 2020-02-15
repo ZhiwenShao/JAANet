@@ -69,7 +69,7 @@ The 3-fold partitions of both BP4D and DISFA are provided in the folder "data", 
     
     loss_weight: 5e-8
 ```
-- There are two minor differences from the original paper:
+- There are two minor differences from the original paper without performance degradation:
   - The redundant cropping of attention maps is removed
   - The first convolution of the third block uses the stride of 2 instead of 1 for smaller model complexity
 
