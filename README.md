@@ -1,5 +1,5 @@
 # JAANet
-This repository implements the training and testing of JAA-Net for "[Deep Adaptive Attention for Joint Facial Action Unit Detection and Face Alignment](http://openaccess.thecvf.com/content_ECCV_2018/papers/Zhiwen_Shao_Deep_Adaptive_Attention_ECCV_2018_paper.pdf)". The repository offers the original implementation of the paper in Caffe. We also release the PyTorch implementation [here](https://github.com/ZhiwenShao/PyTorch-JAANet)
+This repository implements the training and testing of JAA-Net for "[Deep Adaptive Attention for Joint Facial Action Unit Detection and Face Alignment](http://openaccess.thecvf.com/content_ECCV_2018/papers/Zhiwen_Shao_Deep_Adaptive_Attention_ECCV_2018_paper.pdf)". It offers the original implementation of the paper in Caffe. We also release the PyTorch implementation [here](https://github.com/ZhiwenShao/PyTorch-JAANet)
 
 # Getting Started
 ## Dependencies
